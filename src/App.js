@@ -1,5 +1,6 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import quotes from "./Quotes";
 
 function App() {
   return (
@@ -17,6 +18,20 @@ function App() {
         >
           Learn React
         </a>
+        <br />
+        <br />
+        <button
+          className="button"
+          onClick={() => {
+            alert(quotes[0]);
+          }}
+        >
+          Simple Button
+        </button>
+        <h1>Quote list example:</h1>
+        {quotes.map((q) => {
+          return <p>{q}</p>;
+        })}
       </header>
     </div>
   );
