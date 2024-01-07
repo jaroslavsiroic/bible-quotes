@@ -88,7 +88,10 @@ const quotes = [{
 }, {
     quote:`"Wy zatem, bracia, powołani zostaliście do wolności. Tylko nie bierzcie tej wolności jako zachęty do hołdowania ciału, wręcz przeciwnie, miłością ożywieni służcie sobie wzajemnie!"`,
     writer:`- (Ga 5, 13)`
-},]
+},{
+    quote:`"Czyż może niewiasta zapomnieć o swym niemowlęciu, ta która kocha syna swego łona? A nawet gdyby ona zapomniała, Ja nie zapomnę o tobie. Oto wyryłem cię na obu dłoniach"`,
+    writer:`- (Iz 49, 15-16)`
+}]
 
 
 
