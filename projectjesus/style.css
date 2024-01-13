@@ -21,21 +21,21 @@ body {
 	margin-bottom: 50px;
 }
 .pic1 {
-    width: 60%;
+    width: 35%;
 }
 .pic2{
-    width: 30%;
+    width: 15%;
 }
 .pic3{
-    height: 31%;
-    width: 44%;
+    height: 10%;
+    width: 20%;
     margin-top: 50px;
     margin-right: 10px;
-    margin-left: 40px;
+    margin-left: 255px;
 }
 .pic4{
-    height: 31%;
-    width: 44%;
+    height: 10%;
+    width: 20%;
 }
 .pic4p{
 font-size: 45px;
