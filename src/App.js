@@ -28,7 +28,15 @@ function App() {
 
         <div className="button-area">
           <div className="btn">
-            <button id="Qbtn">Wylosuj cytat</button>
+            <button
+              id="Qbtn"
+              onClick={() => {
+                const random = Math.floor(Math.random() * quotes.length);
+                setQuote(quotes[random]);
+              }}
+            >
+              Wylosuj cytat
+            </button>
           </div>
         </div>
       </div>
