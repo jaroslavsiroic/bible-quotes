@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'cardo', serif;
 }
 body {
     display: flex;
@@ -13,20 +13,38 @@ body {
 }
 .container {
 	width: 850px;
-	height: 850px;
+    height: 80%;
+	/* height: 850px; */
 }
 .header {
 	text-align: center;
 	margin-bottom: 50px;
 }
-.header h2 {
-    font-size: xx-large;
-    font-weight: 400;
-    color: #fff;
+.pic1 {
+    width: 60%;
+}
+.pic2{
+    width: 30%;
+}
+.pic3{
+    height: 31%;
+    width: 44%;
+    margin-top: 50px;
+    margin-right: 10px;
+    margin-left: 40px;
+}
+.pic4{
+    height: 31%;
+    width: 44%;
+}
+.pic4p{
+font-size: 45px;
+text-align: right;
+margin-right: 50px;
+color: #fff;
 }
 .main-content {
 	width: 100%;
-	height: 450px;
 	padding: 50px 40px;
 	background-color: #fff;
 	border-radius: 15px;
@@ -35,10 +53,9 @@ body {
 
 .text-area {
 	text-align: center;
-	font-size: 25px;
+	font-size: 55px;
 	color: #262626;
 	line-height: 1.5;
-    
 }
 .text-area .icon {
     margin-right: 5px;
@@ -59,14 +76,14 @@ body {
 	padding: 10px 0;
 }
 .button-area .btn button {
-    background-color: #262626;
+    background-color: #105ec4;
     color: #fff;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 15px;
+    font-size: 40px;
     cursor: pointer;
     border: none;
     outline: none;
-    padding: 10px 15px;
+    padding: 20px 100px;
     
 }
 .button-area button:active {
