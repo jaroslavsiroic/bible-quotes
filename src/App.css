@@ -18,67 +18,94 @@ body {
 .container {
   width: 850px;
   height: 80%;
-}
-.header {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-}
 
-img {
-  max-height: 70px;
-  border: 0;
-}
 
-.organizersText {
+/* .organizersText {
   font-size: 20px;
   text-align: left;
   margin-right: 50px;
   color: #fff;
-}
-.main-content {
-  width: 100%;
-  padding: 50px 40px;
-  background-color: #fff;
-  border-radius: 15px;
-  box-shadow: 0 25px 31px 0 rgba(0, 0, 0, 0.5);
-}
+} */
+  
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  img {
+    max-height: 70px;
+    border: 0;
+  }
+  
+  .main-content {
+    width: 100%;
+    padding: 50px 40px 26px 40px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 25px 31px 0 rgba(0, 0, 0, 0.5);
+    transition: opacity 0.2s ease-in-out;
+    opacity: 1;
+    
+    &.main-content-hidden {
+      opacity: .8;
+    }
 
-.text-area {
-  text-align: center;
-  font-size: 4.5vmin;
-  color: #262626;
-  line-height: 1.5;
-}
-.text-area .icon {
-  margin-right: 5px;
-}
-.main-content .writer {
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  color: red;
-  text-align: center;
-  margin-top: 20px;
-  font-size: 3.2vw;
-}
-.main-content .button-area {
-  display: grid;
-  place-items: center;
-  margin-top: 20px;
-  padding: 10px 0;
-}
-.button-area .btn button {
-  background-color: #105ec4;
-  color: #fff;
-  border-radius: 15px;
-  font-size: 5.2vw;
-  cursor: pointer;
-  border: none;
-  outline: none;
-  padding: 20px 100px;
-}
-.button-area button:active {
-  background-color: deepskyblue;
-}
+    .text-area {
+      text-align: center;
+      font-size: 4.5vmin;
+      color: #262626;
+      line-height: 1.5;
+      
+      transition: opacity 0.3s ease-in-out;
+      opacity: 1;
+      
+      &.text-area-hidden {
+        opacity: 0;
+      }
+     
+      .icon {
+        margin-right: 5px;
+      }
+    }
+  }
+ 
+  .writer {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: red;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 3.2vw;
+  }
+
+  .button-area {
+    display: grid;
+    place-items: center;
+    margin-top: 30px;
+    padding: 10px 0;
+
+    .btn button {
+      background-color: #105ec4;
+      color: #fff;
+      border-radius: 15px;
+      font-size: 3.5vw;
+      cursor: pointer;
+      border: none;
+      outline: none;
+      padding: 20px 100px;
+    }
+
+    button:active {
+      background-color: deepskyblue;
+    }
+
+    button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+  }
+

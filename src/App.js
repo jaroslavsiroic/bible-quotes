@@ -8,6 +8,8 @@ import { useState } from "react";
 
 function App() {
   const [quote, setQuote] = useState(quotes[0]);
+  const [isButtonDisabled, setIsButtonDisabled] = useState(false);
+  const [showVerse, setShowVerse] = useState(true);
 
   return (
     <div className="container">
@@ -19,20 +21,32 @@ function App() {
         <img className="pic2" src={vakc} alt="" />
       </div>
 
-      <div className="main-content">
-        <div className="text-area">
+      <div className={`main-content ${showVerse ? "" : "main-content-hidden"}`}>
+        <div className={`text-area ${showVerse ? "" : "text-area-hidden"}`}>
           <span className="quote">{quote.quote}</span>
+          <div className="writer">{quote.writer}</div>
         </div>
-
-        <div className="writer">{quote.writer}</div>
 
         <div className="button-area">
           <div className="btn">
             <button
               id="Qbtn"
+              disabled={isButtonDisabled}
               onClick={() => {
-                const random = Math.floor(Math.random() * quotes.length);
-                setQuote(quotes[random]);
+                setIsButtonDisabled(true);
+
+                setShowVerse(false); // Hide the verse
+
+                setTimeout(() => {
+                  // Get quote
+                  const random = Math.floor(Math.random() * quotes.length);
+                  setQuote(quotes[random]);
+
+                  setShowVerse(true); // Show the new verse after a delay
+                }, 800); // Adjust the delay as needed
+
+                // Re-enable the button
+                setTimeout(() => setIsButtonDisabled(false), 3000);
               }}
             >
               Wylosuj cytat
