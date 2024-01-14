@@ -7,24 +7,19 @@ import bractwo from "./logo/image003.jpg";
 import { useState } from "react";
 
 function App() {
-  const [quote, setQuote] = useState(quotes[0]);
+  const [quote, setQuote] = useState({
+    quote: "Wylosuj cytat z Pisma Świętego",
+  });
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
   const [showVerse, setShowVerse] = useState(true);
 
   return (
     <div className="container">
       {/* <p className="organizersText">Organizatorzy:</p> */}
-      <div className="header">
-        <img className="pic3" src={bractwo} alt="" />
-        <img className="pic1" src={joanitai} alt="" />
-        <img className="pic4" src={oaza} alt="" />
-        <img className="pic2" src={vakc} alt="" />
-      </div>
-
       <div className={`main-content ${showVerse ? "" : "main-content-hidden"}`}>
         <div className={`text-area ${showVerse ? "" : "text-area-hidden"}`}>
-          <span className="quote">{quote.quote}</span>
-          <div className="writer">{quote.writer}</div>
+          <span className="quote">{quote?.quote}</span>
+          <div className="writer">{quote?.writer}</div>
         </div>
 
         <div className="button-area">
@@ -46,13 +41,19 @@ function App() {
                 }, 800); // Adjust the delay as needed
 
                 // Re-enable the button
-                setTimeout(() => setIsButtonDisabled(false), 3000);
+                setTimeout(() => setIsButtonDisabled(false), 30000);
               }}
             >
-              Wylosuj cytat
+              Słowo Boże dla ciebie
             </button>
           </div>
         </div>
+      </div>
+      <div className="header">
+        <img className="pic3" src={bractwo} alt="" />
+        <img className="pic1" src={joanitai} alt="" />
+        <img className="pic4" src={oaza} alt="" />
+        <img className="pic2" src={vakc} alt="" />
       </div>
     </div>
   );
